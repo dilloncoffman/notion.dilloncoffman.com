@@ -1,0 +1,9 @@
+{
+  "databases": {
+    "4e0d9a44-bfe6-496a-bdd3-f90028c52026": {
+      "id": "4e0d9a44-bfe6-496a-bdd3-f90028c52026",
+      "name": "Blog"
+    }
+  },
+  "typesFolderPath": "./types"
+}
