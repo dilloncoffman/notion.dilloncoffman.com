@@ -1,34 +1,28 @@
-// 
-import Link from "next/link";
-import Image from "next/image";
-import _mediaMap from "../../public/notion-media/media-map.json";
-import { mediaMapInterface } from "notion-on-next/types/types";
-import { BlogPageObjectResponse } from "../../types/notion-on-next.types";
-const mediaMap: mediaMapInterface = _mediaMap;
-
-// The reason why this Card component is specific to a database is because notion-on-next cannot know what properties are in your database. You may want different cards for different databases.
-// It is up to you to complete this component by creating components for your database properties.
+import Link from "next/link"
+import Image from "next/image"
+import _mediaMap from "../../public/notion-media/media-map.json"
+import { mediaMapInterface } from "notion-on-next/types/types"
+import { BlogPageObjectResponse } from "../../types/notion-on-next.types"
+import getFormattedDateString from "../lib/utils/getFormattedDateString"
+const mediaMap: mediaMapInterface = _mediaMap
 
 export const BlogCard = ({
   page,
   databaseId,
 }: {
-  page: BlogPageObjectResponse;
-  databaseId: string;
+  page: BlogPageObjectResponse
+  databaseId: string
 }) => {
+  const { properties } = page
+  const date = properties.Date.date?.start
+    ? new Date(properties.Date.date?.start)
+    : null
+  const estimatedTimeToRead =
+    properties["Estimated Reading Time"].rich_text[0].plain_text
+
   return (
-    <Link
-      href={`/blog/${page.slug}`}
-      key={page.id}
-      style={{
-        width: "100%",
-        boxShadow: "0 0 8px 0 rgba(0, 0, 0, 0.1)",
-        padding: "16px",
-        borderRadius: "8px",
-        border: "1px solid #9ca3af",
-      }}
-    >
-      <div style={{ display: "flex" }}>
+    <Link href={`/blog/${page.slug}`} key={page.id}>
+      <article>
         <div style={{ overflow: "hidden", width: "50%", height: "300px" }}>
           {mediaMap[databaseId]?.[page.id]?.cover && (
             <Image
@@ -45,15 +39,12 @@ export const BlogCard = ({
             />
           )}
         </div>
-        <div style={{ width: "50%", marginLeft: "16px" }}>
-          <div
-            style={{ fontSize: "24px", fontWeight: 700, marginBottom: "24px" }}
-          >
-            {page.title}
-          </div>
-          <div>{new Date(page.created_time).toLocaleDateString()}</div>
-        </div>
-      </div>
+        <h2>{page.title}</h2>
+        <time dateTime={date?.toISOString()}>
+          {getFormattedDateString(date)}
+        </time>
+        <p>{estimatedTimeToRead}</p>
+      </article>
     </Link>
-  );
-};
+  )
+}
