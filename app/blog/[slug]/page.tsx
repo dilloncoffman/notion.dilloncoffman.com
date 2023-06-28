@@ -39,28 +39,41 @@ export default async function BlogPage({
     properties["Estimated Reading Time"].rich_text[0].plain_text
 
   return (
-    <article className="prose lg:prose-xl">
-      {mediaMap[databaseId][page.id].cover && (
-        <Image
-          src={mediaMap[databaseId][page.id].cover}
-          alt={page.title || "Projects Post"}
-          width={800}
-          height={800}
+    <div className="mx-auto max-w-2xl space-y-12 px-4 py-16 sm:px-6">
+      <article className="prose space-y-2 overflow-hidden rounded-xl bg-white drop-shadow-xl lg:prose-lg">
+        <div className="not-prose sm:hidden">
+          {mediaMap[databaseId][page.id].cover && (
+            <Image
+              src={mediaMap[databaseId][page.id].cover}
+              alt={page.title || "Projects Post"}
+              width={800}
+              height={800}
+              className="mb-0"
+            />
+          )}
+        </div>
+        <div className="not-prose px-4">
+          <h1 className="my-4 text-2xl font-bold sm:text-4xl md:tracking-tight">
+            {page.title}
+          </h1>
+          <div className="flex w-full items-start justify-between font-bold  text-dillon-slate md:flex-row md:items-center">
+            <p className="text-xs uppercase sm:text-sm">
+              {getFormattedDateString(date)}
+            </p>
+            <p className="font-boldsm:text-sm flex-shrink-0 text-xs md:mt-0">
+              {estimatedTimeToRead}
+            </p>
+          </div>
+        </div>
+        <hr />
+        <NotionPageBody
+          blocks={blocks}
+          pageId={page.id}
+          databaseId={databaseId}
+          mediaMap={mediaMap}
         />
-      )}
-      <h1 style={{ fontSize: "42px", fontWeight: 700, textAlign: "center" }}>
-        {page.title}
-      </h1>
-      <time dateTime={date?.toISOString()}>{getFormattedDateString(date)}</time>
-      <p>{estimatedTimeToRead}</p>
-      <hr />
-      <NotionPageBody
-        blocks={blocks}
-        pageId={page.id}
-        databaseId={databaseId}
-        mediaMap={mediaMap}
-      />
-    </article>
+      </article>
+    </div>
   )
 }
 

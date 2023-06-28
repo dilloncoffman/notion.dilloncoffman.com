@@ -19,3 +19,23 @@
 body {
   background-color: #E3EBF4;
 }
+
+.notion_page_body {
+  @apply px-4
+}
+
+.notion_image {
+  @apply m-auto sm:max-w-xs
+}
+
+.notion_heading_2 {
+  @apply my-2 md:my-4 !important
+}
+
+.notion_paragraph {
+  @apply leading-6
+}
+
+.notion_divider {
+  @apply my-4 md:my-6 !important
+}
