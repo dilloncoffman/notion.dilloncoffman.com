@@ -13,7 +13,7 @@ export default async function BlogBlog() {
   )
   return (
     <div style={{ padding: "24px", margin: "auto", fontFamily: "sans-serif" }}>
-      <h1>Posts</h1>
+      <h1>Postsss</h1>
       <div>
         {pages.map((page) => (
           <BlogCard page={page} databaseId={databaseId} key={page.id} />
