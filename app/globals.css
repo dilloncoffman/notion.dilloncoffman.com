@@ -20,6 +20,7 @@ body {
   background-color: #E3EBF4;
 }
 
+/** Notion blog styles **/
 .notion_page_body {
   @apply px-4
 }
@@ -46,4 +47,18 @@ body {
 
 .notion_caption {
   @apply block text-center text-sm text-dillon-blue font-bold
+}
+
+/** Loading spinner animation **/
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.animate-spin {
+  animation: spin 2s infinite linear;
 }
