@@ -1,7 +1,10 @@
 import "./globals.css"
-import { Inter } from "next/font/google"
+import { Quattrocento_Sans } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"] })
+const quattrocento = Quattrocento_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+})
 
 export const metadata = {
   title: "Dillon Coffman",
@@ -16,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={quattrocento.className}>{children}</body>
     </html>
   )
 }

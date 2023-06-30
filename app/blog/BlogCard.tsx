@@ -21,15 +21,20 @@ export const BlogCard = ({
     properties["Estimated Reading Time"].rich_text[0].plain_text
 
   return (
-    <Link href={`/blog/${page.slug}`} key={page.id}>
-      <article>
-        <div style={{ overflow: "hidden", width: "50%", height: "300px" }}>
+    <Link
+      href={`/blog/${page.slug}`}
+      key={page.id}
+      className="transition-transform hover:scale-105"
+    >
+      <article className="mx-auto max-w-xs overflow-hidden rounded-lg bg-white shadow-lg">
+        <div className="sm:aspect-video">
           {mediaMap[databaseId]?.[page.id]?.cover && (
             <Image
               alt={page.title || "Cover Image for " + page.id}
               src={mediaMap[databaseId]?.[page.id]?.cover}
-              width={300}
-              height={300}
+              width={800}
+              height={800}
+              className="max-h-[173px] md:max-w-lg"
               style={{
                 objectFit: "cover",
                 objectPosition: "center",
@@ -39,11 +44,13 @@ export const BlogCard = ({
             />
           )}
         </div>
-        <h2>{page.title}</h2>
-        <time dateTime={date?.toISOString()}>
-          {getFormattedDateString(date)}
-        </time>
-        <p>{estimatedTimeToRead}</p>
+        <div className="p-2">
+          <h2 className=" mb-2 truncate text-xl font-bold">{page.title}</h2>
+          <div className="flex w-full items-start justify-between text-xs font-bold text-dillon-slate md:flex-row md:items-center">
+            <p className="uppercase">{getFormattedDateString(date)}</p>
+            <p className="flex-shrink-0   md:mt-0">{estimatedTimeToRead}</p>
+          </div>
+        </div>
       </article>
     </Link>
   )

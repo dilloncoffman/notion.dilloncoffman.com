@@ -48,7 +48,7 @@ export default async function BlogPage({
               alt={page.title || "Projects Post"}
               width={800}
               height={800}
-              className="mb-0"
+              className="mb-0 max-h-44 object-cover"
             />
           )}
         </div>
@@ -56,13 +56,9 @@ export default async function BlogPage({
           <h1 className="my-4 text-2xl font-bold sm:text-4xl md:tracking-tight">
             {page.title}
           </h1>
-          <div className="flex w-full items-start justify-between font-bold  text-dillon-slate md:flex-row md:items-center">
-            <p className="text-xs uppercase sm:text-sm">
-              {getFormattedDateString(date)}
-            </p>
-            <p className="font-boldsm:text-sm flex-shrink-0 text-xs md:mt-0">
-              {estimatedTimeToRead}
-            </p>
+          <div className="flex w-full items-start justify-between text-xs font-bold text-dillon-slate sm:text-sm md:flex-row md:items-center">
+            <p className="uppercase">{getFormattedDateString(date)}</p>
+            <p className="flex-shrink-0 md:mt-0">{estimatedTimeToRead}</p>
           </div>
         </div>
         <hr />
