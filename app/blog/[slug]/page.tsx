@@ -1,4 +1,4 @@
-//
+import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { mediaMapInterface, NotionPageBody } from "notion-on-next"
 import React from "react"
@@ -9,13 +9,25 @@ import Image from "next/image"
 import { NotionOnNextPageObjectResponse } from "notion-on-next/types/types"
 import getFormattedDateString from "@/app/lib/utils/getFormattedDateString"
 
+type Props = {
+  params: { slug: string }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slug = params.slug?.replace(/-/g, " ")
+
+  return {
+    title: `${slug} | Dillon Coffman`,
+  }
+}
+
 const mediaMap: mediaMapInterface = _mediaMap
 interface PageProps {
   slug: string
 }
 const databaseId = "4e0d9a44-bfe6-496a-bdd3-f90028c52026"
 
-export default async function BlogPage({
+export default async function BlogPost({
   params,
 }: {
   params: PageProps

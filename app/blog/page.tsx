@@ -4,7 +4,11 @@ import { BlogCard } from "./BlogCard"
 import "notion-on-next/styles.css"
 const databaseId = "4e0d9a44-bfe6-496a-bdd3-f90028c52026"
 
-export default async function BlogBlog() {
+export const metadata = {
+  title: "Blog | Dillon Coffman",
+}
+
+export default async function Blog() {
   const pages = await cachedGetParsedPages<BlogPageObjectResponse>(
     databaseId,
     undefined, // Add filters here: https://developers.notion.com/reference/post-database-query-filter
