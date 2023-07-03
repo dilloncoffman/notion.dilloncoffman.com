@@ -22,7 +22,7 @@ body {
 
 /** Notion blog styles **/
 .notion_page_body {
-  @apply px-4
+  @apply px-4 max-w-2xl mx-auto
 }
 
 .notion_image {
@@ -45,8 +45,20 @@ body {
   @apply my-2 md:my-4 !important
 }
 
+.notion_video {
+  @apply max-w-sm mx-auto w-full
+}
+ 
 .notion_caption {
-  @apply block text-center text-sm text-dillon-blue font-bold
+  @apply block text-center text-sm text-dillon-blue font-bold 
+}
+
+.notion_quote {
+  @apply leading-6
+}
+
+.notion_bulleted_list_container {
+  @apply leading-4
 }
 
 /** Loading spinner animation **/

@@ -47,7 +47,7 @@ export default async function BlogPost({ params }: { params: PageProps }) {
     properties["Estimated Reading Time"].rich_text[0].plain_text
 
   return (
-    <div className="mx-auto max-w-2xl space-y-12 px-4 py-16 sm:px-6">
+    <div className="mx-auto max-w-4xl space-y-12 px-4 py-16 sm:px-6">
       <article className="prose space-y-2 overflow-hidden rounded-xl bg-white drop-shadow-xl lg:prose-lg">
         <div className="not-prose sm:hidden">
           {mediaMap[databaseId][page.id].cover && (
@@ -61,10 +61,10 @@ export default async function BlogPost({ params }: { params: PageProps }) {
           )}
         </div>
         <div className="not-prose px-4">
-          <h1 className="my-4 text-2xl font-bold sm:text-4xl md:tracking-tight">
+          <h1 className="my-4 text-2xl font-bold leading-6 sm:text-4xl md:tracking-tight">
             {page.title}
           </h1>
-          <div className="flex w-full items-start justify-between text-xs font-bold text-dillon-slate sm:text-sm md:flex-row md:items-center">
+          <div className="flex w-full items-start justify-between text-sm font-bold text-dillon-slate sm:text-base md:flex-row md:items-center">
             <p className="uppercase">{getFormattedDateString(date)}</p>
             <p className="flex-shrink-0 md:mt-0">{estimatedTimeToRead}</p>
           </div>

@@ -27,7 +27,7 @@ export default async function Blog() {
   })
 
   return (
-    <div className="mx-auto max-w-2xl px-2">
+    <div className="mx-auto max-w-4xl px-2">
       <h1 className="my-2 text-xl font-bold md:my-4 md:text-4xl">
         Posts, check it:
       </h1>
