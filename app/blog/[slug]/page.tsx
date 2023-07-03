@@ -27,11 +27,7 @@ interface PageProps {
 }
 const databaseId = "4e0d9a44-bfe6-496a-bdd3-f90028c52026"
 
-export default async function BlogPost({
-  params,
-}: {
-  params: PageProps
-}): Promise<React.ReactNode> {
+export default async function BlogPost({ params }: { params: PageProps }) {
   const { slug } = params
   // This may seem like a roundabout way to retrieve the page, but getParsedPages is a per-request cached function. You can read more about it here https://beta.nextjs.org/docs/data-fetching/caching#preload-pattern-with-cache
   // The reason why we have to get all of the pages and then filter is because the Notion API can only search for pages via page id and not slug.

@@ -1,4 +1,4 @@
-export default function (date: Date | null): string {
+export default function getFormattedDateString(date: Date | null): string {
     if (!date) return ''
     
     return `${date?.getUTCDate()} ${date?.toLocaleString(
