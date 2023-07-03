@@ -1,7 +1,72 @@
+import Link from "next/link"
+import Image from "next/image"
+
 export default function About() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>About</h1>
+    <main className="mx-auto max-w-4xl space-y-3 p-4 sm:space-y-6 sm:px-6 md:py-8">
+      <h1 className="text-3xl font-bold sm:text-5xl">About 👋</h1>
+      <h2 className="text-2xl font-bold sm:text-4xl">
+        Completely Authentic Third Person Bio
+      </h2>
+      <p className="text-base sm:text-xl">
+        Dillon Coffman is a developer from Pittsburgh, PA. He recently graduated
+        in May of 2020 with a Bachelor of Science in Computer Science from
+        Temple University in Philadelphia, PA. He's currently a Senior Web
+        Developer at Wolfe LLC. In his free time he plays{" "}
+        <Link href="/music">music</Link> on all kinds of instruments and tries
+        to read a lot of books on philosophy and life. Here he is trying to pet
+        a Philly bookstore cat unsuccessfully:
+      </p>
+      <Image
+        src="/images/dillon-bookstore-cat.png"
+        width={800}
+        height={800}
+        alt="Dillon unsuccessfully trying to pet a Philly bookstore cat"
+        className="mx-auto rounded-xl"
+      />
+      <h2 className="text-2xl font-bold sm:text-4xl">Hey there!</h2>
+      <p className="text-base sm:text-xl">
+        Thanks for checking out my site. This site is a conglomeration of all
+        things me. Here you'll find everything from my thoughts on tech and
+        philosophy to little songs and covers I've made. Ever since I was little
+        I've been playing guitar (yes, the Fisher-Price piece of plastic with
+        buttons and sounds totally counts!) and find myself most at ease when
+        listening to or playing music. You could say music is my.. ... jam.
+        Sorry about that.
+      </p>
+      <p className="text-base sm:text-xl">
+        Outside of music, I find myself hacking on side projects. I've recently
+        set out on a mission to help those in my local community build an online
+        presence. So far I've helped a local nonprofit by building them an{" "}
+        <a
+          href="https://walk-our-watershed.netlify.app/"
+          rel="noreferrer noopener"
+        >
+          event website
+        </a>{" "}
+        to raise money and get our community active during COVID-19. Thanks to
+        University, a couple rad internships, a cool job and an insatiable
+        curiosity, I've had the opportunity to work with all kinds of
+        technology. From writing C programs to developing Android applications
+        to building web apps in the cloud, you can find it all on{" "}
+        <a href="https://github.com/dilloncoffman" rel="noreferrer noopener">
+          my GitHub
+        </a>
+        . Currently I'm interested in building web apps with{" "}
+        <a href="https://nextjs.org/" rel="noreferrer noopener">
+          Next
+        </a>{" "}
+        and serverless technologies like{" "}
+        <a href="https://docs.amplify.aws/" rel="noreferrer nooopener">
+          AWS Amplify
+        </a>
+        .
+      </p>
+      <p className="text-base sm:text-xl">
+        Want to say 👋? Want to talk tech, music or philosophy? Feel free to
+        reach out any time by{" "}
+        <a href="mailto:dillcoff@gmail.com">emailing me</a>.
+      </p>
     </main>
   )
 }

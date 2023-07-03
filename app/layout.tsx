@@ -19,7 +19,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={quattrocento.className}>{children}</body>
+      <body className={quattrocento.className}>
+        {children}
+        <footer className="text-md mb-4 text-center sm:text-xl">
+          <p>dillon coffman &copy; {new Date().getFullYear()}</p>
+          <p>
+            Proudly published with{" "}
+            <a href="https://vercel.com/" rel="noreferrer noopener">
+              Vercel
+            </a>
+          </p>
+          <p>
+            Built with{" "}
+            <a href="https://nextjs.org/" rel="noreferrer noopener">
+              Next
+            </a>{" "}
+            &{" "}
+            <a href="https://tailwindcss.com/" rel="noreferrer noopener">
+              Tailwind CSS
+            </a>
+          </p>
+        </footer>
+      </body>
     </html>
   )
 }

@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         "dillon-gray": "#E2E8F0",
         "dillon-blue": "#305479",
+        "dillon-link-blue": "#0D96FF",
         "dillon-slate": "#729BC7",
       },
     },

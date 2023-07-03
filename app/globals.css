@@ -74,3 +74,12 @@ body {
 .animate-spin {
   animation: spin 2s infinite linear;
 }
+
+a {
+  @apply text-dillon-link-blue
+}
+
+a:hover {
+  text-decoration: none !important;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, #B3DEFF 1px, #B3DEFF 2px, rgba(0, 0, 0, 0) 20px);
+}
