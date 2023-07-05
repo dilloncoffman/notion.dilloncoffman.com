@@ -1,5 +1,5 @@
-import Link from "next/link"
 import Image from "next/image"
+import Link from "../components/Link"
 
 export default function About() {
   return (
@@ -11,7 +11,7 @@ export default function About() {
       <p className="text-base sm:text-xl">
         Dillon Coffman is a developer from Pittsburgh, PA. He recently graduated
         in May of 2020 with a Bachelor of Science in Computer Science from
-        Temple University in Philadelphia, PA. He's currently a Senior Web
+        Temple University in Philadelphia, PA. He&apos;s currently a Senior Web
         Developer at Wolfe LLC. In his free time he plays{" "}
         <Link href="/music">music</Link> on all kinds of instruments and tries
         to read a lot of books on philosophy and life. Here he is trying to pet
@@ -27,39 +27,37 @@ export default function About() {
       <h2 className="text-2xl font-bold sm:text-4xl">Hey there!</h2>
       <p className="text-base sm:text-xl">
         Thanks for checking out my site. This site is a conglomeration of all
-        things me. Here you'll find everything from my thoughts on tech and
-        philosophy to little songs and covers I've made. Ever since I was little
-        I've been playing guitar (yes, the Fisher-Price piece of plastic with
-        buttons and sounds totally counts!) and find myself most at ease when
-        listening to or playing music. You could say music is my.. ... jam.
-        Sorry about that.
+        things me. Here you&apos;ll find everything from my thoughts on tech and
+        philosophy to little songs and covers I&apos;ve made. Ever since I was
+        little I&apos;ve been playing guitar (yes, the Fisher-Price piece of
+        plastic with buttons and sounds totally counts!) and find myself most at
+        ease when listening to or playing music. You could say music is my.. ...
+        jam. Sorry about that.
       </p>
       <p className="text-base sm:text-xl">
-        Outside of music, I find myself hacking on side projects. I've recently
-        set out on a mission to help those in my local community build an online
-        presence. So far I've helped a local nonprofit by building them an{" "}
-        <a
-          href="https://walk-our-watershed.netlify.app/"
-          rel="noreferrer noopener"
-        >
+        Outside of music, I find myself hacking on side projects. I&apos;ve
+        recently set out on a mission to help those in my local community build
+        an online presence. So far I&apos;ve helped a local nonprofit by
+        building them an{" "}
+        <Link href="https://walk-our-watershed.netlify.app/" noopener>
           event website
-        </a>{" "}
+        </Link>{" "}
         to raise money and get our community active during COVID-19. Thanks to
         University, a couple rad internships, a cool job and an insatiable
-        curiosity, I've had the opportunity to work with all kinds of
+        curiosity, I&apos;ve had the opportunity to work with all kinds of
         technology. From writing C programs to developing Android applications
         to building web apps in the cloud, you can find it all on{" "}
-        <a href="https://github.com/dilloncoffman" rel="noreferrer noopener">
+        <Link href="https://github.com/dilloncoffman" noopener>
           my GitHub
-        </a>
-        . Currently I'm interested in building web apps with{" "}
-        <a href="https://nextjs.org/" rel="noreferrer noopener">
+        </Link>
+        . Currently I&apos;m interested in building web apps with{" "}
+        <Link href="https://nextjs.org/" noopener>
           Next
-        </a>{" "}
+        </Link>{" "}
         and serverless technologies like{" "}
-        <a href="https://docs.amplify.aws/" rel="noreferrer nooopener">
+        <Link href="https://docs.amplify.aws/" noopener>
           AWS Amplify
-        </a>
+        </Link>
         .
       </p>
       <p className="text-base sm:text-xl">
