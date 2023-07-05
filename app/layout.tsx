@@ -1,3 +1,4 @@
+import Link from "./components/Link"
 import "./globals.css"
 import { Quattrocento_Sans } from "next/font/google"
 
@@ -25,19 +26,19 @@ export default function RootLayout({
           <p>dillon coffman &copy; {new Date().getFullYear()}</p>
           <p>
             Proudly published with{" "}
-            <a href="https://vercel.com/" rel="noreferrer noopener">
+            <Link href="https://vercel.com/" noopener>
               Vercel
-            </a>
+            </Link>
           </p>
           <p>
             Built with{" "}
-            <a href="https://nextjs.org/" rel="noreferrer noopener">
+            <Link href="https://nextjs.org/" noopener>
               Next
-            </a>{" "}
+            </Link>{" "}
             &{" "}
-            <a href="https://tailwindcss.com/" rel="noreferrer noopener">
+            <Link href="https://tailwindcss.com/" noopener>
               Tailwind CSS
-            </a>
+            </Link>
           </p>
         </footer>
       </body>
