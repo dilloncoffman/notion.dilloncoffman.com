@@ -3,7 +3,13 @@ import Image from "next/image"
 import getFormattedDateString from "../lib/utils/getFormattedDateString"
 import { YouTubeVideoItem } from "../lib/interfaces/YouTubeVideoItem"
 
-export const YouTubeCard = ({ video }: { video: YouTubeVideoItem }) => {
+export const YouTubeCard = ({
+  key,
+  video,
+}: {
+  key: string
+  video: YouTubeVideoItem
+}) => {
   const { snippet } = video || {}
 
   if (!snippet) return null
@@ -13,7 +19,7 @@ export const YouTubeCard = ({ video }: { video: YouTubeVideoItem }) => {
     <Link
       href={`https://www.youtube.com/watch?v=${snippet.resourceId.videoId}`}
       rel="noopener"
-      key={video.id}
+      key={key}
       target="_blank"
       className="transition-transform hover:scale-105"
     >
