@@ -15,7 +15,7 @@ async function getYouTubeVideos() {
     )
     data = await res.json()
 
-    if (!!data) {
+    if (!!data) { 
       videos.push(...data?.items)
       while (data?.nextPageToken) {
         let nextPageToken = data?.nextPageToken

@@ -47,8 +47,8 @@ export default async function BlogPost({ params }: { params: PageProps }) {
     properties["Estimated Reading Time"].rich_text[0].plain_text
 
   return (
-    <div className="mx-auto max-w-4xl space-y-12 px-4 py-16 sm:px-6">
-      <article className="prose space-y-2 overflow-hidden rounded-xl bg-white drop-shadow-xl lg:prose-lg">
+    <div className="mx-auto max-w-4xl space-y-12 px-2 py-4 sm:px-4 sm:px-6 sm:py-6">
+      <article className="prose mx-auto space-y-2 overflow-hidden rounded-xl bg-white drop-shadow-xl lg:prose-lg">
         <div className="not-prose sm:hidden">
           {mediaMap[databaseId][page.id].cover && (
             <Image

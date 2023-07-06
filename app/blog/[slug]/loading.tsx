@@ -10,6 +10,8 @@ export default function Loading() {
               src="http://kabramkrafts.com/wp-content/uploads/2017/04/earth.svg"
               alt="Earth"
               className="h-full w-full"
+              width={1000}
+              height={1000}
             />
             <div className="bg-transparent text-2xl">🧑‍🚀</div>
           </div>

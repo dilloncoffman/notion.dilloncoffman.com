@@ -1,6 +1,7 @@
-import Link from "./components/Link"
 import "./globals.css"
 import { Quattrocento_Sans } from "next/font/google"
+import Header from "./components/layout/Header"
+import Footer from "./components/layout/Footer"
 
 const quattrocento = Quattrocento_Sans({
   subsets: ["latin"],
@@ -21,26 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={quattrocento.className}>
+        <Header />
         {children}
-        <footer className="text-md mb-4 text-center sm:text-xl">
-          <p>dillon coffman &copy; {new Date().getFullYear()}</p>
-          <p>
-            Proudly published with{" "}
-            <Link href="https://vercel.com/" noopener>
-              Vercel
-            </Link>
-          </p>
-          <p>
-            Built with{" "}
-            <Link href="https://nextjs.org/" noopener>
-              Next
-            </Link>{" "}
-            &{" "}
-            <Link href="https://tailwindcss.com/" noopener>
-              Tailwind CSS
-            </Link>
-          </p>
-        </footer>
+        <Footer />
       </body>
     </html>
   )

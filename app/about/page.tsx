@@ -1,11 +1,15 @@
 import Image from "next/image"
 import Link from "../components/Link"
 
+export const metadata = {
+  title: "About | Dillon Coffman",
+}
+
 export default function About() {
   return (
-    <main className="mx-auto max-w-4xl space-y-3 p-4 sm:space-y-6 sm:px-6 md:py-8">
-      <h1 className="text-3xl font-bold sm:text-5xl">About 👋</h1>
-      <h2 className="text-2xl font-bold sm:text-4xl">
+    <main className="mx-auto max-w-4xl space-y-2 p-4 sm:space-y-3 sm:px-6 md:py-4">
+      <h1 className="text-2xl font-bold md:text-4xl">About 👋</h1>
+      <h2 className="text-xl font-bold md:text-3xl">
         Completely Authentic Third Person Bio
       </h2>
       <p className="text-base sm:text-xl">
@@ -24,7 +28,7 @@ export default function About() {
         alt="Dillon unsuccessfully trying to pet a Philly bookstore cat"
         className="mx-auto rounded-xl"
       />
-      <h2 className="text-2xl font-bold sm:text-4xl">Hey there!</h2>
+      <h2 className="text-xl font-bold md:text-3xl">Hey there!</h2>
       <p className="text-base sm:text-xl">
         Thanks for checking out my site. This site is a conglomeration of all
         things me. Here you&apos;ll find everything from my thoughts on tech and
