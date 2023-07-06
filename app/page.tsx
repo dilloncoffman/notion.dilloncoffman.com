@@ -10,6 +10,7 @@ export default function Home() {
         height={200}
         alt="Dillon unsuccessfully trying to pet a Philly bookstore cat"
         className="mx-auto rounded-full"
+        priority
       />
       <section className="text-center">
         <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
