@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className="bg-dillon-blue">
       <nav
-        className="mx-auto flex items-center justify-between px-2 py-4 md:p-6 lg:px-8"
+        className="mx-auto flex max-w-5xl items-center justify-between px-2 py-4 md:p-6 lg:px-8"
         aria-label="Global"
       >
         <NextLink

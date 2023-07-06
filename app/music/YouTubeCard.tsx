@@ -27,7 +27,10 @@ export const YouTubeCard = ({
         <div className="bg-[#5c9ce0]">
           <Image
             alt={snippet.title || `Cover Image for ${snippet.title}`}
-            src={snippet.thumbnails?.standard?.url}
+            src={
+              snippet.thumbnails?.standard?.url ??
+              "/images/fallback-yt-cover.png"
+            }
             width={800}
             height={800}
             className="max-h-[173px] opacity-40 md:max-w-lg"

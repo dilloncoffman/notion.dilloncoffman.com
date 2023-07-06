@@ -15,7 +15,7 @@ async function getYouTubeVideos() {
     )
     data = await res.json()
 
-    if (!!data) { 
+    if (!!data) {
       videos.push(...data?.items)
       while (data?.nextPageToken) {
         let nextPageToken = data?.nextPageToken
@@ -38,7 +38,7 @@ export default async function Music() {
     (await getYouTubeVideos()) || {}
 
   return (
-    <div className="mx-auto max-w-4xl px-2">
+    <main className="mx-auto max-w-4xl px-2">
       <h1 className="my-2 text-2xl font-bold md:my-4 md:text-4xl">
         Music 🎧🎸
       </h1>
@@ -52,6 +52,6 @@ export default async function Music() {
           </div>
         </>
       )}
-    </div>
+    </main>
   )
 }

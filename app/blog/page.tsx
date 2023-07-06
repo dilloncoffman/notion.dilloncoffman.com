@@ -27,7 +27,7 @@ export default async function Blog() {
   })
 
   return (
-    <div className="mx-auto max-w-4xl px-2">
+    <main className="mx-auto max-w-4xl px-2">
       <h1 className="my-2 text-2xl font-bold md:my-4 md:text-4xl">
         Posts, check it:
       </h1>
@@ -36,6 +36,6 @@ export default async function Blog() {
           <BlogCard page={page} databaseId={databaseId} key={page.id} />
         ))}
       </div>
-    </div>
+    </main>
   )
 }
