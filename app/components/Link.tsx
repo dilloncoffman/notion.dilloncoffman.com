@@ -3,17 +3,19 @@ import { ReactNode } from "react"
 
 export default function Link({
   href,
-  noopener,
   children,
+  noopener,
+  className,
 }: {
   href: string
-  noopener?: boolean
   children: ReactNode
+  noopener?: boolean
+  className?: string
 }) {
   return (
     <NextLink href={href} passHref legacyBehavior>
       <a
-        className="text-dillon-link-blue no-underline hover:bg-gradient-to-t hover:from-[#B3DEFF] hover:to-transparent"
+        className={`${className} text-dillon-link-blue no-underline hover:bg-gradient-to-t hover:from-[#B3DEFF] hover:to-transparent`}
         rel={noopener ? "noreferrer noopener" : ""}
       >
         {children}
