@@ -50,20 +50,14 @@ export default function Home() {
           </p>
         </aside>
         <p className="text-base sm:text-xl">
-          I&apos;m currently planning an application using{" "}
-          <Link href="https://openai.com/dall-e-2" noopener>
-            DALL·E 2
-          </Link>{" "}
-          &amp;{" "}
-          <Link href="https://nextjs.org/" noopener>
-            Next.js
-          </Link>
-          . This summer I&apos;m looking forward to going to another Steelers
-          game &amp; taking a trip to{" "}
+          I&apos;m currently working on my personal health and honing my
+          photography skills. This year I&apos;m looking forward to going to
+          Holland, Michigan &amp; taking a vacation to the{" "}
           <Link href="https://www.hockinghills.com/" noopener>
-            Hocking Hills State Park
-          </Link>
-          . Stay tuned for new <Link href="/blog">blog posts</Link> &amp; some{" "}
+            Outer Banks
+          </Link>{" "}
+          with some family. Stay tuned for new{" "}
+          <Link href="/blog">blog posts</Link> &amp; some{" "}
           <Link href="/music">guitar covers</Link> sprinkled in. In the
           meantime, you can read more <Link href="/about">about me</Link> 🙂
         </p>
