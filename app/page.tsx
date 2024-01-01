@@ -109,8 +109,8 @@ export default async function Home() {
           </a>
           <aside className="my-2">
             <p className="italic">
-              A good reason to learn about Next.js 13+'s route handlers and use
-              Spotify's API 😎
+              A good reason to learn about Next.js 13+&apos;s route handlers and
+              use Spotify&apos;s API 😎
             </p>
           </aside>
         </section>
