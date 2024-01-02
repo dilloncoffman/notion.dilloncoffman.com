@@ -63,7 +63,6 @@ const getNowPlaying = async () => {
   )
 }
 
-export const revalidate = 600
 export async function GET() {
   const response = await getNowPlaying()
 
