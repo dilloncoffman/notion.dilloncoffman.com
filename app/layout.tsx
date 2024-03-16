@@ -1,7 +1,8 @@
 import "./globals.css"
 import { Quattrocento_Sans } from "next/font/google"
 import Header from "./components/layout/Header"
-import Footer from "./components/layout/Footer"
+import Footer from "./components/layout/Footer" 
+import { Analytics } from "@vercel/analytics/react"
 
 const quattrocento = Quattrocento_Sans({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
