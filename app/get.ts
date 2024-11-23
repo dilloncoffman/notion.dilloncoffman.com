@@ -3,7 +3,7 @@ import {
   BlockObjectResponse,
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
-import { getBlocks, getParsedPages } from "notion-on-next";
+import { getBlocks, getParsedPages } from "@dilloncoffman/notion-on-next";
 import { cache } from "react";
 
 // Need to talk to the Notion team about using types for filter and sorts as they are not currently exposed by the SDK, so leaving them as any for now.

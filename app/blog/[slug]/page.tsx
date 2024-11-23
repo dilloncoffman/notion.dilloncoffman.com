@@ -1,12 +1,15 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { mediaMapInterface, NotionPageBody } from "notion-on-next"
+import {
+  mediaMapInterface,
+  NotionPageBody,
+} from "@dilloncoffman/notion-on-next"
 import React from "react"
 import _mediaMap from "../../../public/notion-media/media-map.json"
 import { BlogPageObjectResponse } from "../../../types/notion-on-next.types"
 import { cachedGetBlocks, cachedGetParsedPages } from "../../get"
 import Image from "next/image"
-import { NotionOnNextPageObjectResponse } from "notion-on-next/types/types"
+import { NotionOnNextPageObjectResponse } from "@dilloncoffman/notion-on-next/types/types"
 import getFormattedDateString from "@/app/lib/utils/getFormattedDateString"
 
 type Props = {
