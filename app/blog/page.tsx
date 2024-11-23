@@ -1,7 +1,7 @@
 import { BlogPageObjectResponse } from "../../types/notion-on-next.types"
 import { cachedGetParsedPages } from "../get"
 import { BlogCard } from "./BlogCard"
-import "notion-on-next/styles.css"
+import "@dilloncoffman/notion-on-next/styles.css"
 const databaseId = "4e0d9a44-bfe6-496a-bdd3-f90028c52026"
 
 export const metadata = {
