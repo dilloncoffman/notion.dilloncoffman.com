@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import _mediaMap from "../../public/notion-media/media-map.json"
-import { mediaMapInterface } from "notion-on-next/types/types"
+import { mediaMapInterface } from "@dilloncoffman/notion-on-next/types/types"
 import { BlogPageObjectResponse } from "../../types/notion-on-next.types"
 import getFormattedDateString from "../lib/utils/getFormattedDateString"
 
