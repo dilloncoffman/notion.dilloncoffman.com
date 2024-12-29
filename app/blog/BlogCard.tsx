@@ -27,7 +27,7 @@ export const BlogCard = ({
       key={page.id}
       className="transition-transform hover:scale-105"
     >
-      <article className="mx-auto max-w-xs overflow-hidden rounded-lg bg-white shadow-lg">
+      <article className="mx-auto w-full overflow-hidden rounded-lg bg-white shadow-lg md:max-w-xs">
         <div className="sm:aspect-video">
           {mediaMap[databaseId]?.[page.id]?.cover && (
             <Image

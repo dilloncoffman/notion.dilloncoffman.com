@@ -17,7 +17,7 @@ export default function Header() {
       >
         <NextLink
           href="/"
-          className="bg-gradient-to-t from-[#B3DEFF] to-transparent text-xl font-bold tracking-tight text-white drop-shadow-md [text-shadow:_#729BC7_1px_4px] sm:text-3xl md:text-4xl"
+          className="bg-gradient-to-t from-[#B3DEFF] to-transparent text-center text-xl font-bold tracking-tight text-white drop-shadow-md [text-shadow:_#729BC7_1px_4px] sm:text-3xl md:text-4xl"
         >
           dillon coffman
         </NextLink>

@@ -23,7 +23,7 @@ export const YouTubeCard = ({
       target="_blank"
       className="transition-transform hover:scale-105"
     >
-      <article className="mx-auto h-full max-h-[328px] max-w-xs overflow-hidden rounded-lg bg-white shadow-lg">
+      <article className="mx-auto h-full max-h-[328px] w-full overflow-hidden rounded-lg bg-white shadow-lg md:max-w-xs">
         <div className="bg-[#5c9ce0]">
           <Image
             alt={snippet.title || `Cover Image for ${snippet.title}`}

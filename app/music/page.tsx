@@ -38,14 +38,14 @@ export default async function Music() {
     (await getYouTubeVideos()) || {}
 
   return (
-    <main className="mx-auto max-w-4xl px-2">
+    <main className="mx-auto max-w-4xl px-4">
       <h1 className="my-2 text-2xl font-bold md:my-4 md:text-4xl">
         Music 🎧🎸
       </h1>
       {youtubeVideos?.length > 0 && (
         <>
           <p className="mb-2 text-xl">{totalResults} videos</p>
-          <div className="my-2 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:mb-4 md:grid-cols-3">
+          <div className="my-2 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mb-8 md:grid-cols-3">
             {youtubeVideos.map((video: YouTubeVideoItem) => {
               return <YouTubeCard key={video.id} video={video} />
             })}

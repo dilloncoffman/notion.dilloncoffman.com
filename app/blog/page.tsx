@@ -27,11 +27,11 @@ export default async function Blog() {
   })
 
   return (
-    <main className="mx-auto max-w-4xl px-2">
+    <main className="mx-auto max-w-4xl px-4">
       <h1 className="my-2 text-2xl font-bold md:my-4 md:text-4xl">
         Posts, check it:
       </h1>
-      <div className="my-2 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:mb-8 md:grid-cols-3">
+      <div className="my-2 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mb-8 md:grid-cols-3">
         {pages.map((page) => (
           <BlogCard page={page} databaseId={databaseId} key={page.id} />
         ))}

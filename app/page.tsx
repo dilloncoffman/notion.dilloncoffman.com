@@ -68,10 +68,10 @@ export default async function Home() {
         </aside>
         <p className="text-base sm:text-xl">
           I&apos;m currently working on my personal health and honing my
-          photography skills. This year I&apos;m looking forward to going to
-          Holland, Michigan &amp; taking a vacation to the Outer Banks with some
-          family. Stay tuned for new <Link href="/blog">blog posts</Link> &amp;
-          some <Link href="/music">guitar covers</Link> sprinkled in. In the
+          photography skills. This year I&apos;m looking forward to going to the
+          Smokey Mountains &amp; Shenandoah National Park. Stay tuned for new{" "}
+          <Link href="/blog">blog posts</Link> &amp; some{" "}
+          <Link href="/music">guitar covers</Link> sprinkled in. In the
           meantime, you can read more <Link href="/about">about me</Link> 🙂
         </p>
       </section>
